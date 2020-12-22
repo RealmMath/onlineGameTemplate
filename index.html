@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <!--<script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 13px;
+      display: flex;
+      flex-direction: column;
+      max-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .membersList,
+    .messages {
+      border: 1px solid #d4d4d4;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .messages {
+      flex-shrink: 1;
+      overflow: auto;
+    }
+
+    .message {
+      padding: 5px 0;
+    }
+    .message .member {
+      display: inline-block;
+    }
+
+    .member {
+      padding-right: 10px;
+      position: relative;
+    }
+
+    .button {
+      border-radius:10px;
+      border:1px solid #4e6096;
+      width: 200px;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:19px;
+      padding:8px 16px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #283966;
+      margin: 8px;
+    }    
+    .button:active {
+      position:relative;
+      top:1px;
+    }
+
+    .button.blue{
+      box-shadow: 0px 0px 0px 2px #9fb4f2;
+      background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+      background-color:#7892c2;
+    }
+    .button.blue:hover {
+      background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+      background-color:#476e9e;
+    }
+    .button.red{
+      box-shadow: 0px 0px 0px 2px #cf866c;
+      background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+      background-color:#d0451b;
+    }
+    .button.red:hover {
+      background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+      background-color:#bc3315;
+    }
+    .button.green{
+      box-shadow:inset 0px 0px 15px 3px #9acc85;
+      background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+      background-color:#74ad5a;
+    }
+    .button.green:hover {
+      background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+      background-color:#68a54b;
+    }
+    .button.white{
+      box-shadow:inset 0px 0px 15px 3px #ffffff;
+      background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+      background-color:#ffffff;
+      color:#666666;
+    }
+    .button.white:hover{
+      background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+      background-color:#f6f6f6; 
+    }
+
+       
+
+  </style>
+</head>
+<body>
+  
+  <div id="membersList" class="membersList"></div>
+    
+  <div id="messages" class="messages" style="min-height: 200px;"></div>
+
+  <td><a id="exampleButton" class="button green" data-s="hello_world"></a></td>
+
+  <input id="exampleInput"  class="message-form_main_input" data-s-placeholder="hello_world" type="text"/>
+  
+  <script src="./debugConfig.js"></script>
+  <script src="./pl-strings.js"></script>
+  <script src="./en-strings.js"></script>  
+  <script src="./main.js"></script>
+</body>
+</html>
